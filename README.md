@@ -33,7 +33,7 @@ The repository contains the following main components:
 - `models/` – dbt models and trained machine learning models
 - `seeds/` – directory for dbt seed data
 - `snapshots/` – directory for dbt snapshots
-- `tests/` – dbt tests
+- `tests/` – directory for dbt tests
 - `scripts/` – Python scripts for data preparation
 - `output/` – the CSV dataset used in the project
 - `screenshots/` – dashboard and Slack report screenshots
