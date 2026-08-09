@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: iot23
+    database: ANOMALY_DB
+    schema: PUBLIC
+
+    tables:
+      - name: IOT23_DATA
