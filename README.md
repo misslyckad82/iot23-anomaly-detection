@@ -32,6 +32,7 @@ The repository contains the following main components:
 - `scripts/` – Python scripts for data preparation
 - `IoT23_ML_Analysis_and_Experiment_Tracking.py` – main machine learning workflow
 - `dbt_project.yml` – dbt project configuration
+- `IoT23_ML_Analysis_and_Experiment_Tracking.ipynb` - main machine learning workflow (Jupyter Notebook)
 
 ## Machine Learning
 

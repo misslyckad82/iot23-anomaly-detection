@@ -868,16 +868,15 @@ from mlflow.tracking import MlflowClient
 
 client = MlflowClient()
 
-# MAGIC %md
-# MAGIC ## MLflow Experiment Setup
-# MAGIC
-# MAGIC Before running the notebook, replace `<your-email>` in the MLflow experiment path with the email address associated with your Databricks account.
-# MAGIC
-# MAGIC For example:
-# MAGIC
-# MAGIC `/Users/<your-email>/iot23_mlflow`
-# MAGIC
-# MAGIC The experiment path is used to create and track the MLflow experiments for the models in this project.
+# MLflow Experiment Setup
+
+# Before running the notebook, replace <your-email> in the MLflow experiment path
+# with the email address associated with your Databricks account.
+# For example:
+
+# `/Users/<your-email>/iot23_mlflow`
+
+# The experiment path is used to create and track the MLflow experiments for the models in this project.
 
 experiment_name = "/Users/<your-email>/iot23_mlflow"
 
@@ -1271,12 +1270,6 @@ response = requests.post(
 # Display the response returned by Slack.
 print(f"Status code: {response.status_code}")
 print(response.text)
-
-# MAGIC %md
-# MAGIC ## Check Saved Models
-# MAGIC
-# MAGIC This cell checks the current working directory and lists the saved `.pkl` model files.
-# MAGIC It is used to verify that the trained machine learning models have been saved correctly.
 
 # COMMAND ----------
 
