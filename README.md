@@ -30,7 +30,7 @@ The repository contains the following main components:
 
 - `analyses/` – dbt analyses
 - `macros/` – reusable dbt macros
-- `models/` – trained machine learning models
+- `models/` – dbt models and trained machine learning models
 - `seeds/` – dbt seed data
 - `snapshots/` – dbt snapshots
 - `tests/` – dbt tests
