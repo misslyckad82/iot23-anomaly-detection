@@ -20,9 +20,25 @@ The project includes:
 - MLflow experiment tracking
 - Model performance comparison
 - Feature importance analysis
-- Groq-based analysis of the model results
+- AI-assisted analysis of the model results using Groq
 - Automated reporting to Slack
 - An interactive Databricks dashboard
+
+## Project Structure
+
+The repository contains the following main components:
+
+- `analyses/` – dbt analyses
+- `macros/` – reusable dbt macros
+- `models/` – dbt models and trained machine learning models
+- `seeds/` – dbt seed data
+- `snapshots/` – dbt snapshots
+- `tests/` – dbt tests
+- `scripts/` – Python scripts for data preparation
+- `output/` – the CSV dataset used in the project
+- `screenshots/` – dashboard and Slack report screenshots
+- `IoT23_ML_Analysis_and_Experiment_Tracking.py` – main machine learning workflow
+- `dbt_project.yml` – dbt project configuration
 
 ## Machine Learning
 
@@ -63,7 +79,9 @@ Three experiments are tracked:
 
 ## Running the Project
 
-The project is designed to run in Databricks.
+The project is designed to use Snowflake, dbt and Databricks.
+
+The dbt project contains the data transformation models used to prepare the data for machine learning. The machine learning workflow is executed in Databricks.
 
 When using the notebook, replace `<your-email>` in the MLflow experiment path with the email address associated with your Databricks account.
 
@@ -91,4 +109,3 @@ The Databricks dashboard contains visualizations for:
 - MLflow
 - Groq
 - Slack
-
