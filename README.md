@@ -28,11 +28,11 @@ The project includes:
 
 The repository contains the following main components:
 
-- `analyses/` – dbt analyses
-- `macros/` – reusable dbt macros
+- `analyses/` – directory for dbt analyses
+- `macros/` – directory for dbt macros
 - `models/` – dbt models and trained machine learning models
-- `seeds/` – dbt seed data
-- `snapshots/` – dbt snapshots
+- `seeds/` – directory for dbt seed data
+- `snapshots/` – directory for dbt snapshots
 - `tests/` – dbt tests
 - `scripts/` – Python scripts for data preparation
 - `output/` – the CSV dataset used in the project
