@@ -6,9 +6,7 @@ Cybersecurity anomaly detection pipeline using a subset of the IoT-23 dataset wi
 
 This project is about building a machine learning pipeline for detecting malicious network traffic using a subset of the IoT-23 dataset.
 
-The selected data is based on Zeek network log data and was converted to CSV before being loaded into Snowflake. The data is then transformed using dbt and accessed through Unity Catalog in Databricks.
-
-Databricks is used for data analysis, preprocessing, machine learning and experiment tracking.
+The selected data is based on Zeek network log data from the IoT-23 dataset and was converted to CSV before being loaded into Snowflake. The data is then transformed using dbt and accessed through Unity Catalog in Databricks. Databricks is used for data analysis, preprocessing, machine learning and experiment tracking.
 
 The project includes:
 
@@ -104,3 +102,15 @@ The Databricks dashboard contains visualizations for:
 - MLflow
 - Groq
 - Slack
+
+## Dataset
+
+This project uses a subset of the IoT-23 dataset created by the Stratosphere Laboratory.
+
+The data used in this project was derived from Zeek network log data from the IoT-23 dataset.
+
+**Citation:**
+
+Garcia, S., Parmisano, A., & Erquiaga, M. J. (2020). *IoT-23: A labeled dataset with malicious and benign IoT network traffic* (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.4743746
+
+Dataset source: https://www.stratosphereips.org/datasets-iot23
