@@ -1,6 +1,6 @@
 # IoT23 Anomaly Detection
 
-End-to-end cybersecurity anomaly detection pipeline using Snowflake, dbt, Databricks and MLflow on a subset of the IoT-23 dataset.
+Cybersecurity anomaly detection pipeline using a subset of the IoT-23 dataset with Snowflake, dbt, Databricks, MLflow, Groq and Slack.
 
 ## Project Description
 
@@ -30,7 +30,7 @@ The repository contains the following main components:
 
 - `analyses/` – dbt analyses
 - `macros/` – reusable dbt macros
-- `models/` – dbt models and trained machine learning models
+- `models/` – trained machine learning models
 - `seeds/` – dbt seed data
 - `snapshots/` – dbt snapshots
 - `tests/` – dbt tests
