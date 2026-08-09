@@ -1271,6 +1271,12 @@ response = requests.post(
 print(f"Status code: {response.status_code}")
 print(response.text)
 
+# MAGIC %md
+# MAGIC ## Check Saved Models
+# MAGIC
+# MAGIC This cell checks the current working directory and lists the saved `.pkl` model files.
+# MAGIC It is used to verify that the trained machine learning models have been saved correctly.
+
 # COMMAND ----------
 
 # MAGIC %sh
