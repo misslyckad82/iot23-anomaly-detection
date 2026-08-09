@@ -4,9 +4,11 @@ End-to-end cybersecurity anomaly detection pipeline using Snowflake, dbt, Databr
 
 ## Project Description
 
-This project develops a machine learning pipeline for detecting malicious network traffic using a subset of the IoT-23 dataset.
+This project is about building a machine learning pipeline for detecting malicious network traffic using a subset of the IoT-23 dataset.
 
-The data is stored and transformed using Snowflake and dbt, while Databricks is used for data analysis, machine learning and experiment tracking.
+The selected data is based on Zeek network log data and was converted to CSV before being loaded into Snowflake. The data is then transformed using dbt and accessed through Unity Catalog in Databricks.
+
+Databricks is used for data analysis, preprocessing, machine learning and experiment tracking.
 
 The project includes:
 
@@ -18,33 +20,35 @@ The project includes:
 - MLflow experiment tracking
 - Model performance comparison
 - Feature importance analysis
-- Groq-based analysis of model results
+- Groq-based analysis of the model results
 - Automated reporting to Slack
 - An interactive Databricks dashboard
 
 ## Machine Learning
 
-The main supervised model is Random Forest with 100 decision trees.
+The main supervised model used in the project is Random Forest with 100 decision trees.
 
-An A/B test compares Random Forest models using 100 and 200 trees to determine whether increasing the number of trees improves performance.
+An A/B test was performed to compare Random Forest models with 100 and 200 trees. The purpose was to see if increasing the number of trees would improve the model performance.
 
-Isolation Forest is also evaluated as an unsupervised anomaly detection approach.
+Isolation Forest was also tested as an unsupervised anomaly detection model.
 
-The dataset is highly imbalanced, with approximately 99.44% malicious traffic and 0.56% benign traffic. Therefore, accuracy is interpreted together with precision, recall and F1-score.
+The dataset is highly imbalanced. Approximately 99.44% of the traffic is malicious and 0.56% is benign. Because of this, accuracy alone is not enough to evaluate the models, so precision, recall and F1-score are also considered.
 
 ## Results
 
-The Random Forest models achieved very similar evaluation results on the selected dataset. Increasing the number of trees from 100 to 200 did not provide a measurable improvement.
+The Random Forest models achieved very similar results. Increasing the number of trees from 100 to 200 did not result in any measurable improvement.
 
-The Random Forest models substantially outperformed the Isolation Forest model on the selected dataset.
+Random Forest performed substantially better than Isolation Forest on the selected dataset.
 
-Feature importance analysis identified `ORIG_IP_BYTES`, `DURATION` and `TOTAL_PACKETS` as the three most influential features for the Random Forest model.
+The feature importance analysis showed that `ORIG_IP_BYTES`, `DURATION` and `TOTAL_PACKETS` were the three most important features for the Random Forest model.
 
-Because the dataset is highly imbalanced and the Random Forest results were extremely high, the results should be interpreted carefully and validated on an appropriate held-out or cross-validated dataset before deployment.
+The very high Random Forest results should be interpreted with some caution because the dataset is highly imbalanced. The model performance should be further validated using a proper held-out or cross-validated dataset before using the model in a real-world environment.
 
 ## MLflow
 
-MLflow is used to track:
+MLflow is used to track the machine learning experiments.
+
+The following are logged:
 
 - Model parameters
 - Evaluation metrics
@@ -61,16 +65,16 @@ Three experiments are tracked:
 
 The project is designed to run in Databricks.
 
-The user should provide their own Databricks MLflow experiment path and credentials for external services when prompted.
+When using the notebook, replace `<your-email>` in the MLflow experiment path with the email address associated with your Databricks account.
 
-The Slack webhook URL and Groq API key are entered at runtime and are not stored directly in the source code.
+The Slack webhook URL and Groq API key are entered when the notebook is run. They are not stored directly in the source code.
 
 ## Dashboard
 
-The Databricks dashboard provides visualizations of:
+The Databricks dashboard contains visualizations for:
 
 - Benign and malicious traffic
-- Network connections over time
+- Network connections by hour
 - Traffic by protocol
 - Total connections
 - Model performance comparison
