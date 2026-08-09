@@ -29,9 +29,9 @@ The project includes:
 The repository contains the following main components:
 
 - `models/` – dbt models and trained machine learning models
-- `scripts/` – Python scripts for data preparation
 - `output/` – the CSV dataset used in the project
 - `screenshots/` – dashboard and Slack report screenshots
+- `scripts/` – Python scripts for data preparation
 - `IoT23_ML_Analysis_and_Experiment_Tracking.py` – main machine learning workflow
 - `dbt_project.yml` – dbt project configuration
 
