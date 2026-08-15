@@ -9,3 +9,8 @@ dbt_internal_packages/
 __pycache__/
 *.pyc
 .vscode/
+*.txt
+secrets*
+*password*
+*api*
+*key*
